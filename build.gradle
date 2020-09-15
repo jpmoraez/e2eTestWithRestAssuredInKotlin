@@ -32,7 +32,4 @@ dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
 }
 
-application {
-    // Define the main class for the application.
-    mainClassName = 'e2eTestWithRestAssuredInKotlin.AppKt'
-}
+task teste(type:Test) {}

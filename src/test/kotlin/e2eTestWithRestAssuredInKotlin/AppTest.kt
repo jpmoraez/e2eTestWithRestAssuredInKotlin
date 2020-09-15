@@ -3,12 +3,11 @@
  */
 package e2eTestWithRestAssuredInKotlin
 
+import org.hamcrest.CoreMatchers.*
+import org.junit.Assert.*
 import kotlin.test.Test
-import kotlin.test.assertNotNull
 
 class AppTest {
     @Test fun testAppHasAGreeting() {
-        val classUnderTest = App()
-        assertNotNull(classUnderTest.greeting, "app should have a greeting")
     }
 }
