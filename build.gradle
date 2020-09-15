@@ -19,17 +19,16 @@ repositories {
 }
 
 dependencies {
-    // Align versions of all Kotlin components
-    implementation platform('org.jetbrains.kotlin:kotlin-bom')
+    // Kotlin
+    testImplementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
-    // Use the Kotlin JDK 8 standard library.
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    // Rest Assured
+    testImplementation 'io.rest-assured:kotlin-extensions:4.+'
 
-    // Use the Kotlin test library.
-    testImplementation 'org.jetbrains.kotlin:kotlin-test'
-
-    // Use the Kotlin JUnit integration.
-    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
+    // JUnit
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.6.1'
 }
 
-task teste(type:Test) {}
+test {
+    useJUnitPlatform()
+}
